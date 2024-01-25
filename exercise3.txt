@@ -1,0 +1,19 @@
+UNF:
+database(PatientNo, PatientName, BedNo, WardNo, WardName, DrugNo, Name, Desc, Dosage, MOA, UpD, StartDate, FinishDate)
+
+1NF:
+database(*PatientNo*, PatientName, BedNo, WardNo, WardName, *DrugNo*, Name, Desc, Dosage, MOA, UpD, *StartDate*, FinishDate)
+
+2NF:
+database(*PatientNo*, BedNo, WardNo, WardName, *DrugNo*, UpD, *StartDate*, FinishDate)
+patient(*patientno*, patientname)
+drug(*drugno*,name,desc,dosage,MOA)
+
+3NF:
+database(*PatientNo*, *DrugNo*, UpD, *StartDate*, FinishDate)
+patient(*patientno*, patientname, wardno, wardname, bedno)
+drug(*drugno*,name,desc,dosage,MOA)
+ward(*wardno*,wardname)
+
+BCNF:
+=3NF
