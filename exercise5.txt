@@ -1,0 +1,29 @@
+PART1:
+
+- select guestname, guestaddress from guest where guestaddress like "%London%";
+
+- select type, price from room where price<40.00 having type="single" or type="family" order by price asc;
+
+- select * from booking where dateto is null;
+
+- select round(avg(price),2) as average_roomprice from room;
+
+- select type, sum(price) from room group by type having type="double";
+
+- select count(distinct(guestno)) from booking;
+
+PART2:
+
+- select room.hotelno, hotel.hotelname, room.type, room.price from room join hotel on hotel.hotelno=room.hotelno having hotelname="The Tower Hotel";
+
+- select hotel.hotelname, booking.guestno, booking.datefrom, booking.dateto, booking.roomno from hotel join booking on booking.hotelno=hotel.hotelno having hotelname="The Tower Hotel";
+
+- select hotel.hotelname, booking.guestno, guest.guestname, booking.datefrom, booking.dateto, booking.roomno from hotel join booking on booking.hotelno=hotel.hotelno join guest on guest.guestno=booking.guestno having hotelname="The Tower Hotel";
+- ?
+
+- select room.roomno from booking join room on room.hotelno=booking.hotelno where room.roomno != booking.roomno; (probably wrong)
+
+- ?
+
+
+
