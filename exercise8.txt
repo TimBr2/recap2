@@ -1,0 +1,12 @@
+- soft: curl 'https://rest.ensembl.org/sequence/region/human/13:32889000..32891000:1?' -H 'Content-type:text/x-fasta';mask=soft
+  hard: curl 'https://rest.ensembl.org/sequence/region/human/13:32889000..32891000:1?' -H 'Content-type:text/x-fasta';mask=hard
+
+- curl 'https://rest.ensembl.org/xrefs/symbol/homo_sapiens/CCR5?' -H 'Content-type:application/json'
+
+- curl 'https://rest.ensembl.org/homology/symbol/human/CCR5?target_species=chimpanzee;type=orthologues' -H 'Content-type:application/json'
+
+- curl 'https://rest.ensembl.org/sequence/id/ENST00000001146?type=genomic' -H 'Content-type:text/x-fasta'
+
+- curl 'https://rest.ensembl.org/sequence/id' -H 'Content-type:application/json' -H 'Accept:application/json' -X POST -d '{ "ids" : ["ENSG00000002587","ENSG00000003056" ] }'
+
+- curl 'https://rest.ensembl.org/sequence/region/human/7:35182..35332:1?' -H 'Content-type:text/plain'
